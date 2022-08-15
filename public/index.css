@@ -432,7 +432,7 @@ form .button:hover{
 }
 #projects-section h1 {
     margin: 20px;
-    border: solid white;
+    padding: 10px;
 }
 
 .box{
