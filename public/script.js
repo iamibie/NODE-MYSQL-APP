@@ -1,5 +1,20 @@
+const hamburger = document.getElementById("h-menu")
+const nav = document.getElementById("nav")
+const closeIcon = document.querySelector('.close')
+const openIcon = document.querySelector('.open')
 
-
+const toggleMenu = ()=> {
+    if (nav.classList.contains("nav-show")) {
+      nav.classList.remove("nav-show");
+     
+    } else {
+      nav.classList.add("nav-show");
+      
+    
+    }
+  }
+  
+  hamburger.addEventListener("click", toggleMenu);
 
 
 
