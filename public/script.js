@@ -9,8 +9,7 @@ const toggleMenu = ()=> {
      
     } else {
       nav.classList.add("nav-show");
-      
-    
+
     }
   }
   
