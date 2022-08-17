@@ -109,7 +109,7 @@ body{
     border: none;
     overflow: hidden;
     position: relative;
-    top: 20%;
+    top: 25%;
 
 }
 
@@ -859,8 +859,8 @@ footer a{
         
     }
     #projects-section h1 {
-        margin: 20px;
-        padding: 10px;
+        margin: 5px;
+
     }
     
     .box{
@@ -869,9 +869,9 @@ footer a{
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: space-between;
+        justify-content: space-around;
         width: 25rem;
-        height: 10rem;
+        height: 15rem;
         margin: 10px;
         box-shadow: 2px 4px 5px  rgba(0, 0, 0, 0.3);
         transform: translateX(300%);
@@ -888,8 +888,7 @@ footer a{
         align-items: center;
         border: none;
         width: 100%;
-        height: 90%;
-        margin-bottom: 20px;
+        height: 100%;
         text-align: center;
     
     }
