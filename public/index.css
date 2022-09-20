@@ -485,7 +485,7 @@ header video{
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    border: solid red;
+   
 
 }
 .contact-text{
@@ -627,7 +627,7 @@ footer hr{
 /***********************************************************************************************************************************************************/
 
 
-@media (max-width: 800px){
+@media (max-width: 1500px){
     .navBar {
       background-color: var(--flame);
         color: var(--xiketic);
