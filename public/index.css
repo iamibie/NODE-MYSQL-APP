@@ -25,12 +25,15 @@
 
 body{
     background: var(--xiketic);
-    color: whitesmoke;
     font-family: 'Orbitron', sans-serif;
     position: relative;
     margin: 0;
     padding: 0;
+    color: white;
     
+}
+html{
+    scroll-behavior: smooth;
 }
 
 
@@ -39,26 +42,52 @@ body{
 
 .navBar {
     background-color: var(--flame);
-    color: var(--xiketic);
-    width: 70vw;
-    height: 6vh;
+    min-width: 100%;
+    min-height: 8vh;
     margin: 0;
-    position: absolute;
-    top: 5rem;
-    left: 15rem;
+    position: sticky;
+    top: 0;
+    left: 0;
     display: flex;
-    justify-content: space-evenly;
-    box-shadow: 6px 6px 8px 0px var(--gold-crayola);
+    justify-content: space-between;
     align-items: center;
     overflow: hidden;
     z-index: 1000;
+    border-bottom: var(--gold-crayola) solid 5px;
 }
-.nav-active {
-    position: sticky;
-    top: 0;
-    width: 100vw;
-    box-shadow: none;
+
+.nav-div1{
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
+.nav-div1{
+    color: var(--banana-mania);
+    
+
+}
+
+.nav-div1 a:hover{
+    color: var(--xiketic);
+
+}
+
+.nav-div2{
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.nav-div2{
+    color: var(--xiketic);
+}
+
+.nav-div2 a:hover{
+    color: var(--medium-aquamarine);
+}
+
+
 
 .navBar a{
     text-decoration: none;
@@ -69,6 +98,7 @@ body{
     padding: 10px;
     border-radius: 50px;
     background-color: var(--gold-crayola);
+   
 }
 .navBar .span2{
     padding: 10px;
@@ -78,9 +108,6 @@ body{
     
 }
 
-.navBar a:hover{
-    color: var(--banana-mania);
-}
 
 #h-menu{
     display: none;
@@ -102,82 +129,94 @@ body{
 
 .main-section{
     width: 100%;
-    height: 100vh;
+    min-height: 95vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     overflow: hidden;
     position: relative;
-   
+    background: rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    margin-bottom: 100px;
+  
+
+
 
 }
 
-.name-job{
-    width: 100vw;
-    height: 400px;
+.intro{
+    min-width: 100vw;
+    min-height:59vh ;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+   
+    
+
+}
+.hi{
+    font-size: 15rem;
+    
+    height: 100%;
+    position: relative;
+    top: 5rem;
+    left: 10rem;
+    padding: 2rem;
+    
+}
+.hi span{
+    color: var(--gold-crayola);
+}
+
+.intro-div1{
+    
+    width: 40%;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    border: none;
-    overflow: hidden;
-    position: relative;
-    top: 35%;
-
+   justify-content: center;
+   align-items: center;
+   position: relative;
+   right: 10rem;
+   top: 8rem;
 }
-
-.im-span1{
-    position: relative;
-    left: 5%;
-    overflow: hidden;
-    color: var(--blue-munsell);
-    transition: ease-in .2s;
+.intro-div1 p{
     
-}
-.im-span1:hover{
-    color: var(--banana-mania);
-}
-.im{
-    transform: translateX(100%);
+    margin: 0;
+   
 }
 
-.sd-span2{
-    position: relative;
-    left: 30%;
-    overflow: hidden;
-    color: var(--light-gray);
-    transition: ease-in .21s;
-    
-}
-.sd-span2:hover{
-    color: var(--independence);
-}
-.sd{
-    transform: translateX(100%);
-}
-.sd-span2 h1 span{
-    color: var(--banana-mania);
-    font-size: 50px;
-}
-.ce-span3{
-    position: relative;
-    left: 75%;
-    overflow: hidden;
+.name {
+    font-size: 2rem;
+    padding: 0;
+    margin: 1rem;
     color: var(--flame);
-    transition: ease-in .22s;
     
 }
-.ce-span3:hover{
-    color: var(--english-violet);
+.name h1{
     
+    margin: 0;
+   
 }
-.ce{
-    transform: translateX(100%);
+.role{
+    padding: 0;
+    margin: 1rem;
+
 }
-.name-job h1{
-    font-size: 60px;
-    font-weight: 60px;
+.role .cyb{
+    color: var(--blue-munsell);
+    font-size: 2.5rem;
 }
+.role .dev{
+    color: white;
+    font-size: 2.5rem;
+}
+.role .gnr{
+    color: var(--gold-crayola);
+    font-size: 2.5rem;
+}
+
 
 
 
@@ -189,10 +228,12 @@ body{
     border-radius: 30px;
     text-decoration: none;
     transition: ease .4s;
-    
-        position: absolute;
-        top: 65%;
-        left: 10%;
+        position: relative;
+        bottom: 5rem;
+
+    width: 10rem;
+    text-align: center;
+       
     
 }
 #contact-me:hover{
@@ -204,21 +245,26 @@ body{
 
 
 header video{
-    width: 15%;
     position: absolute;
-    top: 27%;
-    right: 13%;
-    border: solid .5rem var(--medium-aquamarine);
+    top: 0%;
+    left: 0%;
+    /*transform: translate(-50%, -50%);*/
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
 }
 
 .socials{
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: relative;
-    bottom: 0%;
+    width: 20%;
+    position: absolute;
+    top: 60%;
+    left: 9%;
     overflow: hidden;
 }
+
 .social-links{
     border: none;
     width: 100vw;
@@ -236,7 +282,8 @@ header video{
 
 }
 .social{
-    margin: 20px;
+    margin: 5px;
+    padding: 1rem;
 }
 .social:hover h4{
     color: var(--flame);
