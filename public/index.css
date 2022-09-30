@@ -53,7 +53,7 @@ html{
     align-items: center;
     overflow: hidden;
     z-index: 1000;
-    border-bottom: var(--gold-crayola) solid 5px;
+    border-bottom: var(--english-violet) solid 5px;
 }
 
 .nav-div1{
