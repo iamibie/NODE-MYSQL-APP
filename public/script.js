@@ -4,6 +4,7 @@ const closeIcon = document.querySelector('.close')
 const openIcon = document.querySelector('.open')
 
 
+
 const toggleMenu = ()=> {
     if (nav.classList.contains("nav-show")) {
       nav.classList.remove("nav-show");
@@ -30,6 +31,10 @@ window.addEventListener('load', ()=>{
     fName.classList.remove('im')
     sofDev.classList.remove('sd')
     cybEng.classList.remove('ce')
+
+   
+
+
 
 
 })
