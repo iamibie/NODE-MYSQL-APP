@@ -114,16 +114,20 @@ html{
 }
 
 
-/***
+
 
 .headings{
-   
-    margin: auto;
-    padding-bottom: 6rem;
-    font-weight: bold;
-    font-size: 3rem;
+    text-transform: capitalize;
+    margin: 0;
+    width: fit-content;
+    padding-top: 2rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    font-size: 35px;
+    color: var(--xiketic);
+    background-color: var(--flame);
 }
-***/
+
 
 
 
@@ -293,7 +297,7 @@ header video{
 
 #about-section{
     width: 100%;
-    height: 70vh;
+    height: 100%;
     overflow: hidden;
     margin: 0;
     background-color: white;
@@ -304,14 +308,7 @@ header video{
     justify-content: center;
   
 }
-#about-section h1{
-    margin: 0;
-    width: fit-content;
-    padding: 1rem;
-    font-size: 35px;
 
-
-}
 
 .about-details{
     width: 90%;
@@ -323,6 +320,8 @@ header video{
 }
 .about-h3{
     text-transform: capitalize;
+    text-align: end;
+    line-height: 3rem;
     margin: 0;
     display: flex;
     flex-direction: column;
@@ -330,7 +329,7 @@ header video{
     justify-content: center;
     width: 100%;
     font-size: 1.5rem;
-    padding: 35px;
+    padding-right: 10rem;
 }
 
 .about-details .span1{
@@ -342,8 +341,6 @@ header video{
 .about-details .span3{
     color: var(--banana-mania);
 }
-
-    
 
 .abt-img{
     width: 100%;
@@ -364,48 +361,47 @@ header video{
 /*************************************************************SKILLS SECTION**********************************************************************************************/
 
 #skills-section{
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
+    background-color: whitesmoke;
+    color: black;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    
     margin: 0;
     overflow: hidden;
 
 }
 
-
-
-#skills-section img{
-    width: 100%;
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: .5rem;
-    box-shadow: 6px 6px 3px 0px var(--light-gray);
-
-}
 
 
 .tools{
     width: 100%;
-    height: 40%;
-    align-items: center;
-    margin: 0;
-   
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-auto-rows: minmax(100px auto);
-    grid-gap: 1rem;
-    padding: 5rem 15rem;
+    height: 100%;
     overflow: hidden;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   
+}
+.img-sets{
+  border: none;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  
+
 
 }
-
-
+.img-sets img{
+    width: 12rem;
+    border: none;
+  
+}
 
 
 /************************************************************PROJECTS SECTION**********************************************************************************************/
@@ -413,7 +409,7 @@ header video{
 
 
 #projects-section{
-    width: 100%;
+    width: 100vw;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -423,6 +419,10 @@ header video{
     overflow: hidden;
     
 }
+#projects-sections h1{
+    padding-bottom: 40px;
+}
+
 
 
 .box{
@@ -435,7 +435,6 @@ header video{
     width: 40%;
     height: 20rem;
     margin: 10px;
-    box-shadow: 2px 4px 5px  rgba(0, 0, 0, 0.3);
     transform: translateX(300%);
     transition: 0.4s ease;
     position: relative;
@@ -516,7 +515,6 @@ header video{
 
 }
 
-
 .box:nth-of-type(even) {
     transform: translateX(-300%);
 
@@ -526,13 +524,52 @@ header video{
     transform: translateX(0%);
 }
 
+.explore-git{
+    text-transform: capitalize;
+    text-decoration: underline;
+    font-size: 20px;
+    padding: 2rem;
+    color: white;
+}
+
+
+/*************************************************************CETIFICATIONS SECTION**********************************************************************************************/
+
+.cert-section{
+    width: 100vw;
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--light-gray);
+}
+
+.certs-div{
+    width: 100%;
+    padding-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cert{
+    width: 35%;
+    height: 100%;
+    border: none;
+    padding: 1rem;
+    transition: ease-in-out .4s;
+}
+.cert:hover{
+    transform: scale(.98);
+}
+
 
 /*************************************************************CONTACT-FORM SECTION**********************************************************************************************/
 
 
 #contact-form-section{
     width:100vw;
-    height: 80vh;
+    height: 100vh;
     border: none;
     display: flex;
     flex-direction: row;
@@ -641,6 +678,7 @@ footer{
     transition: ease .4s;
     position: relative;
     bottom: 0%;
+    background-color: var(--independence);
 }
 
 footer a{
