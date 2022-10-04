@@ -315,6 +315,7 @@ header video{
     overflow: hidden;
     position: relative;
     display: flex;
+    padding-bottom: 5rem;
 
     
 }
