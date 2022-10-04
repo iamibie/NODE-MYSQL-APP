@@ -1,6 +1,6 @@
 module.exports = { 
     apps: [{
-      name    : "nodejs-vanillaJS-App",
+      name    : "index.js",
       script  : "node",
       args    : "start"
     }]
