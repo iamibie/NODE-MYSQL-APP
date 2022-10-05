@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "type": "commonjs",
+  "type": "module",
   "scripts": {
-    "start":"node index",
+    "start": "node index",
     "dev": "nodemon index.js"
   },
   "author": "",
@@ -16,5 +16,9 @@
     "express": "^4.18.1",
     "express-async-handler": "^1.2.0",
     "mongoose": "^6.5.1"
+  },
+  "devDependencies": {
+    "mocha": "^10.0.0",
+    "supertest": "^6.3.0"
   }
 }

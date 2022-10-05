@@ -12,17 +12,15 @@ const app = express()
 app.use(express.json())
 app.use(express.static('public'))
 
-app.listen(port, ()=>{
-    console.log(`Server is running in ${process.env.NODE_ENV} mode on port ${port}`)
-})
 
-{/**
-    app.get('/', (req, res)=>{
 
-    res.send(`App is running in ${process.env.NODE_ENV} mode`)
+
+app.get('/', (req, res)=>{
+
+    res.send(`hellow world`)
 
 })
- */}
+ 
 
 
 
@@ -204,6 +202,11 @@ if(process.argv[2] ==='-d') {
     importData()
 }
  */}
+
+
+ app.listen(port, ()=>{
+    console.log(`Server is running in ${process.env.NODE_ENV} mode on port ${port}`)
+})
 
 
 
