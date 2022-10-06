@@ -753,7 +753,7 @@ footer hr{
     
       .main-section{
         width: 100%;
-        min-height: 95vh;
+        min-height: 100vh;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -1202,7 +1202,7 @@ form .button:hover{
     /*************************************************************MAIN SECTION**********************************************************************************************/
     .main-section{
         width: 100%;
-        min-height: 95vh;
+        min-height: 100vh;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -1623,7 +1623,7 @@ form .button:hover{
     /*************************************************************MAIN SECTION**********************************************************************************************/
     .main-section{
         width: 100%;
-        min-height: 95vh;
+        min-height: 100vh;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -1649,9 +1649,8 @@ form .button:hover{
     .hi{
         font-size: 4rem;
         height: 100%;
-        
         position: relative;
-        top: 5rem;
+        top: 2rem;
         left: 0;
         padding: 2rem;
         
