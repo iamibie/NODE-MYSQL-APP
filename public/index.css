@@ -1014,6 +1014,7 @@ footer hr{
 }
 .img-sets img{
     width: 8rem;
+    padding: 2rem;
     border: none;
   
 }
