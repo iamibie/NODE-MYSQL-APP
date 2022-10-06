@@ -744,8 +744,8 @@ footer hr{
       #h-menu{ 
           display: block;
           position: fixed;
-          top: 4rem;
-          left: 4rem;
+          top: 2rem;
+          left: 3rem;
           z-index: 200;
       }
 
@@ -1186,19 +1186,7 @@ form .button:hover{
         display: flex;
          
       }
-  
-      #h-menu{ 
-          display: block;
-          position: fixed;
-          top: 4rem;
-          left: 4rem;
-          z-index: 200;
-      }
-  
-      .close {
-          display: none;
-        }
-    
+
     
     /*************************************************************MAIN SECTION**********************************************************************************************/
     .main-section{
