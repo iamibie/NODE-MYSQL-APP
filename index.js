@@ -11,12 +11,17 @@ const app = express()
 
 app.use(express.json())
 
-
-
+app.use(express.static('public'))
 
  
 
+/**
+ * app.get('/', (req, res)=>{
 
+        res.send(`Server running in ${process.env.NODE_ENV} mode`)
+    
+    })
+ */
 
 
 ////Connect Database////////////////
@@ -86,23 +91,6 @@ app.post('/api/message', asyncHandler(async (req,res) => {
         
     }
 ))
-
-
-
-
-
-
-if (process.env.NODE_ENV === 'production'){
-    app.use(express.static('public'))
-} else{
-
-    app.get('/', (req, res)=>{
-
-        res.send(`Server running in ${process.env.NODE_ENV} mode`)
-    
-    })
-
-}
 
 
 
