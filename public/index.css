@@ -456,6 +456,13 @@ header video{
     background-size: cover;
 }
 
+.box-2{
+    background-image: url(/img/SGIA-PI.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .box-info{
     margin: 0;
     padding: 0;
