@@ -1,9 +1,28 @@
 import express from 'express'
 import dotenv from 'dotenv'
-import mongoose from 'mongoose'
 import asyncHandler from 'express-async-handler'
+import mysql from 'mysql'
 
 dotenv.config()
+
+var connection = mysql.createConnection({
+    host     : process.env.RDS_HOSTNAME,
+    user     : process.env.RDS_USERNAME,
+    password : process.env.RDS_PASSWORD,
+    port     : process.env.RDS_PORT,
+    database : process.env.RDS_DB
+})
+
+connection.connect((err)=>{
+    if(err){
+        throw err
+    }
+
+    console.log("MYSQL_DB connected...")
+})
+
+
+
 
 const port = process.env.PORT || 5000
 
@@ -13,92 +32,31 @@ app.use(express.json())
 
 app.use(express.static('public'))
 
- 
 
-/**
- * app.get('/', (req, res)=>{
-
-        res.send(`Server running in ${process.env.NODE_ENV} mode`)
-    
-    })
- */
-
-
-////Connect Database////////////////
-
-const connectDB = async () => {
-    try {
-        const conn =  await mongoose.connect(process.env.MONGO_URI)
-
-        console.log(`MongoDB connected:${conn.connection.host}`)
-        
-    } catch (error) {
-        console.error(`Error ${error.message}`)
-        process. exit(1)
-        
-    }
-}
-
-connectDB();
-
-
-////CreateDataModel and Scehma
-
-const messageSchema = mongoose.Schema({
-    name:{
-        type: String,
-        required: true
-    },
-    email:{
-        type: String,
-        required: true
-    },
-    message:{
-        type: String,
-        required: true
-
-    },
-},
-   
-    {timestamps:true}
-)
-
-const Message = mongoose.model('message', messageSchema)
-
-
-////Routes///
 app.post('/api/message', asyncHandler(async (req,res) => {
-        const {name, email, message} = req.body
+   
+    let data = [req.body.name,req.body.email,req.body.message]
+
+    let sql = 'INSERT INTO `messages_tb` (name, email, message) VALUES (?, ?, ?)'
+
+    connection.query(sql, data,  (err, result) => {
+        if(err) throw err;
+            console.log(result);
+            res.json(data)
+        });
     
-        const saveMessage = await Message.create({
-            name,
-            email,
-            message
-        })
     
-        if(saveMessage){
-            res.status(201).json({
-                _id:saveMessage._id,
-                name:saveMessage.name,
-                email:saveMessage.email,
-                message:saveMessage.message,
-               
-            })
-        } else {
-            res.status(404)
-            throw new Error('Message not saved!')
-        }
-        
-    }
-))
-
-
-
+}));
 
 
 app.listen(port, ()=>{
     console.log(`Server is running in ${process.env.NODE_ENV} mode on port ${port}`)
 })
+
+
+
+
+
 
 
 
