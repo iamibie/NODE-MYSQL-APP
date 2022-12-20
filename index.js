@@ -4,6 +4,13 @@ import asyncHandler from 'express-async-handler'
 import mysql from 'mysql'
 
 dotenv.config()
+const port = process.env.PORT || 5000
+
+const app = express()
+
+app.use(express.json())
+
+app.use(express.static('public'))
 
 var connection = mysql.createConnection({
     host     : process.env.RDS_HOSTNAME,
@@ -23,17 +30,7 @@ connection.connect((err)=>{
 
 
 
-
-const port = process.env.PORT || 5000
-
-const app = express()
-
-app.use(express.json())
-
-app.use(express.static('public'))
-
-
-app.post('/api/message', asyncHandler(async (req,res) => {
+app.post('/api/message', (req,res) => {
    
     let data = [req.body.name,req.body.email,req.body.message]
 
@@ -46,7 +43,7 @@ app.post('/api/message', asyncHandler(async (req,res) => {
         });
     
     
-}));
+});
 
 
 app.listen(port, ()=>{
