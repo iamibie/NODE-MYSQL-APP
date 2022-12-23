@@ -49,8 +49,8 @@ window.addEventListener("scroll", ()=>{
 
     const navBarTop = navBar.getBoundingClientRect().top
 
-    console.log(scrollPosition)
-    console.log(navBarTop)
+    /*console.log(scrollPosition)
+    console.log(navBarTop)*/
 
     
     if(navBarTop < scrollPosition) {
