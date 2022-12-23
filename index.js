@@ -38,8 +38,8 @@ app.post('/api/message', (req,res) => {
 
     connection.query(sql, data,  (err, result) => {
         if(err) throw err;
-            console.log(result);
-            res.json(data)
+            console.log('sent!');
+            res.json(result)
         });
     
     
