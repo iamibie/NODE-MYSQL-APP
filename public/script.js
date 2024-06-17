@@ -96,7 +96,7 @@ const submitFormHandler = async () => {
     
     if(name,email,message){
     
-   const data = await axios.post('/api/message', {name, email, message}) 
+   const data = await axios.post('/message', {name, email, message}) 
 
    if(data)alert('Message sent!')
 
