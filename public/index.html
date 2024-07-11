@@ -3,31 +3,36 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="index.css">
+<link rel="stylesheet" href="./index.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT&family=Orbitron:wght@800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 <script src="https://kit.fontawesome.com/f26ddb2ce1.js" crossorigin="anonymous"></script>
 <title>Ibrahim Mahamane Portfolio</title>
 <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
 </head>
-<body> 
+<body>
+    <video class="main-vid" muted autoplay loop>
+        <source src="/img/video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+     </video> 
     
     
-   <nav id="nav" class="navBar">
-       <div class="nav-div1">
+   <nav id="nav" class="navBar"> 
+        <div class="nav-div2">
+            <a class="resume" href="Ibrahim Mahamane-1.pdf">Resume</a>
+            <a class="blog" href="https://www.thegeekimposter.com">Blog</a>
+            <a href="#section3" class="contact-me">Contact me!</a> 
+        </div>
+
+        <div class="nav-div1">
             <a href="#">Home</a>
-            <a href="#about-section">About</a>
-            <a href="#skills-section">Skills</a>
-            <a href="#projects-section">Projects</a>
-            <a href="#crt-section">Certs</a>
-       </div>
-      <div class="nav-div2">
-        <span><a href="Ibrahim Mahamane-1.pdf">Resume</a></span>
-        <span class="span2"><a href="https://www.thegeekimposter.com">Blog</a></span>
-      </div>
+            <a href="#section1">About</a>
+            <a href="#section2">Projects</a>
+        </div>
    </nav>
 
    <div id="h-menu">
@@ -36,24 +41,16 @@
 
  
     <header id="home" class="main-section">
-
-        <video muted autoplay loop>
-            <source src="/img/video.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-         </video>
-
-
-            <div class="intro">
-                <span class="hi">
-                    H<span>i</span>,
+          <div class="intro">
+                <span id="hi">
+                    <span id="h-span">H</span><span id="i-span">i</span>,
                 </span>
 
                 <div class="intro-div1">
-                    <p>my name is</p>
-                    <span class="name"><h1>Ibrahim Mahamane</h1></span>
-                    <p>i am a</p>
-                    <h1 class="role"> <span class="cyb">Cybersecurity</span></h1>| 
-                    <h1 class="role"><span class="dev">DevOps</span> <br> <span class="gnr">Engineer</span> </h1>
+                    <p>I'm</p>
+                    <span class="name"><h1>Ibrahim</h1></span>
+                    <p>I'm A(n)</p>
+                    <h1 class="role"><span class="cyb">Full stack software developer</span> <br> <span class="gnr">&</span> <br> <span class="dev">Application security engineer</span></h1>
                 </div>
                
             </div>
@@ -67,127 +64,181 @@
                    <div class="social"><a href="https://github.com/iamibie"><img src="/img/github.png" alt="Github" ></a></div>
                  </div>
              </div>
-
-             <a href="#contact-form-section" id="contact-me">Contact me!</a>
-        
     </header>
-
-    <section id="about-section">
-        <h1 class="headings">about me</h1>
-  
-        <div class="about-details">
-     
-       <div class="abt-img"><img class="ai ai-active" src="/img/6.png" alt=""></div>
-       
     
-       <div class="about-h3">
-        <h3>
-            I am an experienced <span class="span1">Cybersecurity/DevOps </span> Egineer based in Chicago IL. <br> 
-            I am adept at assessing and implementing appropriate controls for key security threats and vulnerabilities, <br> 
-            I love building applications and using code, and other technologies, to 
-            <span class="span2">automate</span> and <span class="span3">streamline</span> the deployment processes. <br>
-        </h3>
-       </div>
-       </div>
-    </section>
 
-
-
-
-    <section id="skills-section">
-            <h1 class="headings">tools and technologies</h1>
-
+    <div id="section1">
+        <section id="about-section">
+           <div class="about">
+                <h3>
+                    I develop  <span class="span1">secure web apps </span> & protect vulnerable ones against  <span class="span2">cyber threats and attacks.</span>    <br>
+                    I have a passion for technical problem solving, clean code and hunting down bugs.<br>
+                    I am an independent thinker, but a strong team player.<br>
+                    <span class="span3">Ambitious and results-driven.</span>
+                </h3>
+           </div>
+        </section>
+    
+    
+        <section id="skills-section">
             <div class="tools">
                     <div class="img-sets img-set1">
-                        <img src="/img/mt.png" alt="">
-                        <img src="/img/Spl.png" alt="">
-                        <img src="/img/jenkins.png" alt="">
-                        <img src="/img/git.jpeg" alt="">
+                        <img class="img" src="/img/bs.png" alt="">
+                        <img class="img" src="/img/jenkins.png" alt="">
+                        <img class="img" src="/img/git.png" alt="">
+                        
                         
                     </div>
                     <div class="img-sets img-set2">
-                        <img src="/img/ubuntu.jpeg" alt="">
-                        <img src="/img/docker.jpeg" alt="">
-                        <img src="/img/Octocat.png" alt="">
-                        <img src="/img/azure.png" alt="">
+                        <img class="img" src="/img/docker.png" alt="">
+                        <img class="img" src="/img/python-django.png" alt="">
+                        <img class="img" src="/img/azure.png" alt="">
+                        <img class="img" src="/img/Kubernetes.svg" alt="">
+                        
                        
                     </div>
                     <div class="img-sets img-set3">
-                        <img src="/img/nodejs.png" alt="">
-                        <img src="/img/aws.png" alt="">
-                        <img src="/img/DO.png" alt="">
-                        <img src="/img/virtualbox.png" alt="">
+                        <img class="img" src="/img/aws.png" alt="">
+                        <img class="img" src="/img/node-express.png" alt="">
+                        <img class="img" src="/img/react.svg" alt="">
+                        <img class="img" src="/img/Terraform.svg" alt="">
                        
                     </div>
                    <div class="img-sets img-set4">
-                        <img src="/img/python.png" alt="">
-                        <img src="/img/mysql.png" alt="">   
-                        <img src="/img/mongodb.png" alt=""> 
-                        <img src="/img/wireshark.png" alt="">
+                        <img class="img" src="/img/mysql.png" alt="">   
+                        <img class="img" src="/img/mongodb.png" alt=""> 
+                        <img class="img" src="/img/wireshark.png" alt="">
+                        <img class="img" src="/img/Ansible.svg" alt="">
                    </div> 
             </div>
-    </section>
-
-  
-
-    <section id="projects-section">
-        <h1 class="headings">Projects</h1>
-        
-        <div class="box box-1">
-            <div class="box-info">
-                    <h1>DevOps</h1>
-                </div>   
-            </div>
-        </div>
-        
-        <div class="box box-2">
-            <div class="box-info">
-                <h1>Cybersecurity</h1>
-            </div>   
-        </div>   
-    </section>
-
-
-    <section class="cert-section" id="crt-section">
-        <h1 class="headings">certifications</h1>
-        <div class="certs-div">
-            <div class="cert">
-                <a href="https://www.credly.com/badges/d147adbd-20d9-4762-a034-a05149eeb3cd"><img  src="/img/secplus.png" alt="" width="100%" height="100%"></a>
-            </div>
-            <div  class="cert">
-                <a href="March Live Graduate.pdf"><img src="/img/fltiron.png" alt="" width="100%" height="100%"></a>
-            </div>
-        </div>
-    </section>
-
-
-  
-
-    <section id="contact-form-section">
-        <div class="contact-text"><h1>Leave <br> <span>me a </span><br> message!</h1></div>
-        <form id="myForm" >
-            <input type="text" placeholder="Name" id="name" class="form-input" required>
-            <input type="email" placeholder="Email" id="email" class="form-input" required>
-            <textarea id="message" cols="30" rows="10" placeholder="Message"  class="form-input" required></textarea>
-            <input class="button" type="submit" href=""></input>
-        </form>
-    </section>
-
-
-  
-
-    <footer>
-        <div id="contact">
-            <a href="#" style="margin:20px">Back to top</a>
-            <hr width="300px">
-            <div id="ph-em" >
-                <a href="mailto:iamahamane@gmail.com"><p>iamahamane@gmail.com</p></a>
-            </div>
-        </div>
-    </footer>
+        </section>
     
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="script.js"></script>
+        <section class="cert-section" id="crt-section">
+                <div class="cert sp">
+                    <a href="https://www.credly.com/badges/d147adbd-20d9-4762-a034-a05149eeb3cd"><img  src="/img/secplus.png" alt="" width="100%" height="100%"></a>
+                </div>
+                <div  class="cert fi">
+                    <a href="March Live Graduate.pdf"><img src="/img/fltiron.png" alt="" width="100%" height="100%"></a>
+                </div>
+        </section>
+</div>
+
+
+
+<section id="section2">  
+
+    <div class="box box-1">
+        <div class="img-div"><img src="/img/blog.png"  alt=""></div>
+        <div class="box-info">
+                <div class="title"><h1>PROJECT 1</h1></div>
+                <div class="description"><P>Lorem Ipsum I have a passion for technical problem solving, clean code and hunting down bugs.<br>
+                    I am an independent thinker, but a strong team player.<br></P></div>
+                <div class="box-buttons">
+                    <a href="https://github.com/iamibie/mernApp.git">GitHub</a>
+                    <a href="https://www.thegeekimposter.com">LIVE</a>
+                </div> 
+        </div>
+    </div>
+    
+    <div class="box box-2">
+        <div class="img-div"><img src="/img/SGIA-PI.png"   alt=""></div>
+        <div class="box-info">
+            <div class="title"><h1>PROJECT 1</h1></div>
+            <div class="description"><P>Lorem Ipsum I have a passion for technical problem solving, clean code and hunting down bugs.<br>
+                I am an independent thinker, but a strong team player.<br></P></div>
+                <div class="box-buttons">
+                        <a href="https://github.com/iamibie/mern-ecomm-app.git">GitHub</a>
+                        <a href="http://137.184.186.97/">LIVE</a>
+                </div>
+        </div>   
+    </div>
+
+    <div class="box box-3">
+        <div class="img-div"><img src="/img/ubuntu.jpeg" alt=""></div>
+        <div class="box-info">
+            <div class="title"><h1>PROJECT 1</h1></div>
+            <div class="description"><P>Lorem Ipsum I have a passion for technical problem solving, clean code and hunting down bugs.<br>
+                I am an independent thinker, but a strong team player.<br></P></div>
+                <div class="box-buttons">
+                    <a href="">Github</a>
+                    <a href="">Live</a>
+                </div>
+        </div>
+    </div>
+
+    <div class="box box-4">
+        <div class="img-div"><img src="/img/docker.jpeg"  alt=""></div>
+            <div class="box-info">
+                <div class="title"><h1>PROJECT 1</h1></div>
+                <div class="description"><P>Lorem Ipsum I have a passion for technical problem solving, clean code and hunting down bugs.<br>
+                    I am an independent thinker, but a strong team player.<br></P></div>
+                <div class="box-buttons">
+                    <a href="">Github</a>
+                    <a href="">Live</a>
+                </div>    
+            </div>
+        </div>
+    </div>
+
+<!--
+        <div class="box box-3">
+        <div class="box-info">
+            <h1>PROJECT 3</h1>
+            <P>Lorem Ipsum</P>
+             <div class="project-links">
+                <a href="">Github</a>
+                <a href="">Live</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="box box-4">
+        <div class="box-info">
+            <h1>PROJECT 4</h1>
+            <P>Lorem Ipsum</P>
+             <div class="project-links">
+                <a href="">Github</a>
+                <a href="">Live</a>
+            </div>
+        </div>
+    </div>
+-->
+</section>
+
+
+
+<section id="section3">
+    <div class="contact-text"><h1>Leave <br> <span>me a </span><br> message!</h1></div>
+    <form id="myForm" >
+        <input type="text" placeholder="Enter your ame" id="name" class="form-input" required>
+        <input type="" placeholder="Enter your email" id="email" class="form-input" required>
+        <textarea id="message" cols="30" rows="10" placeholder="Type your message"  class="form-input" required></textarea>
+        <input class="button" type="submit" href=""></input>
+    </form>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="./script.js"></script>
     
    
 </body>
@@ -206,6 +257,22 @@
                 </div>
             </div>
             <a class="explore-git" href="https://github.com/iamibie">Explore my Github repository...</a>
+
+
+
+
+
+
+
+    <footer>
+        <div id="contact">
+            <a href="#" style="margin:20px">Back to top</a>
+            <hr width="300px">
+            <div id="ph-em" >
+                <a href="mailto:iamahamane@gmail.com"><p>iamahamane@gmail.com</p></a>
+            </div>
+        </div>
+    </footer>
 
 -->
 

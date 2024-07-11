@@ -10,6 +10,7 @@ const app = express()
 
 app.use(express.json())
 
+app.use(express.static('public/pages'))
 app.use(express.static('public'))
 
 
