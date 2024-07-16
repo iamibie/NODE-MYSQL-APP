@@ -1,7 +1,6 @@
 import express from 'express'
 import dotenv from 'dotenv'
-import asyncHandler from 'express-async-handler'
-import mysql from 'mysql'
+import mysql from 'mysql2'
 
 dotenv.config()
 const port = process.env.PORT || 5000
@@ -10,37 +9,25 @@ const app = express()
 
 app.use(express.json())
 
-app.use(express.static('public/pages'))
 app.use(express.static('public'))
+
 
 
 //create a connection
 var connection = mysql.createConnection({
     host     : process.env.HOSTNAME,
-    user     : process.env.USERNAME,
-    password : process.env.PASSWORD,
-    database : process.env.DB
+    user     : process.env.MYSQL_USER,
+    password : process.env.MYSQL_PASSWORD,
+    database : process.env.MYSQL_DATABASE
 })
 
 connection.connect((err)=>{
     if(err){
         throw err
     }
-
     console.log("MYSQL_DB connected...")
 })
 
-
-/*
-//Create Database
-app.get('/createdb',(req, res) =>{
-    let sql = 'CREATE DATABASE portfoliodb'
-    connection.query(sql, (err, result)=>{
-        if (err) throw err;
-        console.log(result)
-        res.send('Database created...')
-    })
-})*/
 
 //Create Table
 app.get('/createtable', (req,res)=>{
@@ -71,6 +58,27 @@ app.post('/message', (req,res) => {
 app.listen(port, ()=>{
     console.log(`Server is running in ${process.env.NODE_ENV} mode on port ${port}`)
 })
+
+
+
+
+
+
+
+
+
+
+
+/*
+//Create Database
+app.get('/createdb',(req, res) =>{
+    let sql = 'CREATE DATABASE portfoliodb'
+    connection.query(sql, (err, result)=>{
+        if (err) throw err;
+        console.log(result)
+        res.send('Database created...')
+    })
+})*/
 
 
 
