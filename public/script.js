@@ -5,6 +5,7 @@ const openIcon = document.querySelector('.open')
 const hi = document.getElementById('hi')
 const ispan = document.getElementById('i-span')
 const img = document.querySelectorAll('.img')
+const myForm = document.getElementById("myForm")
 
 
 
@@ -47,6 +48,37 @@ window.addEventListener('scroll', () => {
             box.classList.remove('show')
         }
     })
+})
+
+
+
+
+
+
+const submitFormHandler = async () => {
+    const name = document.getElementById("name").value  
+    const email = document.getElementById("email").value
+    const message = document.getElementById("message").value
+    
+  
+    
+if(name,email,message){
+    
+   const data = await axios.post('/message', {name, email, message}) 
+
+   if(data)alert('Message sent!')
+
+   } else {
+    error => console.error(error)
+   }
+
+ }
+
+
+myForm.addEventListener("submit", async (e) =>{
+    e.preventDefault();
+    submitFormHandler();
+    e.target.reset();
 })
 
 
@@ -184,33 +216,7 @@ window.addEventListener("scroll", ()=>{
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-const myForm = document.getElementById("myForm")
 
-
-const submitFormHandler = async () => {  
-    const email = document.getElementById("email").value
-    const message = document.getElementById("message").value
-    const name = document.getElementById("name").value
-  
-    
-    if(name,email,message){
-    
-   const data = await axios.post('/message', {name, email, message}) 
-
-   if(data)alert('Message sent!')
-
-   } else {
-    error => console.error(error)
-   }
-
- }
-
-
-myForm.addEventListener("submit", async (e) =>{
-    e.preventDefault();
-    submitFormHandler();
-    e.target.reset();
-})
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
