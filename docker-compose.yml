@@ -70,7 +70,8 @@ services:
     ports: 
       - "80:80"
     volumes:
-      - ./public:/usr/share/nginx/html:ro
+      - ./public:/usr/share/nginx/html
+      - ./nginx/default.conf:/etc/nginx/default.conf
     restart: always
 
 networks:
