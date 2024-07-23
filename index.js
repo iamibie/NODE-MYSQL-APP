@@ -16,7 +16,7 @@ app.use(express.static('public'))
 //create a connection
 
     var connection = mysql.createConnection({
-        host     : process.env.HOSTNAME,
+        host     : process.env.HOST,
         user     : process.env.MYSQL_USER,
         password : process.env.MYSQL_PASSWORD,
         database : process.env.MYSQL_DATABASE
