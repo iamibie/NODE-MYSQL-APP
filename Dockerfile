@@ -17,4 +17,4 @@ COPY . .
 # Exports
 EXPOSE 5000
 
-CMD ["npm","start", "dev"]
+CMD ["npm","start", "dev", "nodemon"]

@@ -14,19 +14,20 @@ app.use(express.static('public'))
 
 
 //create a connection
-var connection = mysql.createConnection({
-    host     : process.env.HOSTNAME,
-    user     : process.env.MYSQL_USER,
-    password : process.env.MYSQL_PASSWORD,
-    database : process.env.MYSQL_DATABASE
-})
 
-connection.connect((err)=>{
-    if(err){
-        throw err
-    }
-    console.log("MYSQL_DB connected...")
-})
+    var connection = mysql.createConnection({
+        host     : process.env.HOSTNAME,
+        user     : process.env.MYSQL_USER,
+        password : process.env.MYSQL_PASSWORD,
+        database : process.env.MYSQL_DATABASE
+    })
+    
+    connection.connect((err)=>{
+        if(err){
+            throw err
+        }
+        console.log("MYSQL_DB connected...")
+    })
 
 
 //Create Table
@@ -53,6 +54,10 @@ app.post('/message', (req,res) => {
     
     
 });
+
+
+
+
 
 
 app.listen(port, ()=>{
