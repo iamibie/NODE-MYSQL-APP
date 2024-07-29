@@ -1,3 +1,5 @@
+markdown
+Copy code
 # My Dockerized Web Application
 
 This project sets up a full-stack web application using Docker Compose. It includes a MySQL database, a Node.js backend, and a static frontend served through Nginx.
@@ -33,20 +35,28 @@ This project sets up a full-stack web application using Docker Compose. It inclu
    ```bash
    git clone https://github.com/yourusername/your-repo.git
    cd your-repo
-2. Create a .env file in the root directory and set your environment variables:
+Create a .env file in the root directory and set your environment variables:
 
+env
+Copy code
 MYSQL_ROOT_PASSWORD=your_root_password
 MYSQL_DATABASE=your_database
 MYSQL_USER=your_user
 MYSQL_PASSWORD=your_password
-
 Build and start the Docker containers:
+
+bash
+Copy code
 docker-compose up --build
 This will start the MySQL database, Node.js backend, and Nginx server.
 
 Configuration
 Docker Compose
 Here's an overview of the docker-compose.yml configuration:
+
+yaml
+Copy code
+version: '3.8'
 
 services:
   db:
@@ -102,12 +112,12 @@ volumes:
   node_modules:
   web-root:
     driver: local
-
 Usage
 Access the frontend at http://localhost
 The backend can be accessed at http://localhost:5000
 Example Nginx Configuration
-
+nginx
+Copy code
 upstream backend {
     server backend:8000;
 }
@@ -134,11 +144,11 @@ server {
         proxy_pass http://backend;
     }
 }
-
 Connecting to the MySQL Database
 In your Node.js application, use the following configuration to connect to the MySQL database:
 
-
+javascript
+Copy code
 const mysql = require('mysql');
 
 const connection = mysql.createConnection({
@@ -185,4 +195,4 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 css
 Copy code
 
-This README provides a comprehensive overview of your project, including setup instructions, configuration details, and usage guidelines. Adjust the details as necessary to fit your specific project and requirements.
+This README provides a comprehensive overview of your project, including setup instructions, configuration details, and usage guidelines. Adjust the details as necessary to fit 
