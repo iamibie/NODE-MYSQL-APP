@@ -684,6 +684,53 @@ form .button:hover{
 }
 
 
+    /******************************************************************************FOOTER SECTION******************************************************************************/
+    
+    
+    
+    
+    footer{
+        width: 100%;
+        height: 20vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: ease .4s;
+        
+    }
+
+    footer:hover{
+        background:linear-gradient(179deg, #cf5c36ff 0%, #bce784ff 100%);
+    }
+    footer a{
+        text-decoration: none;
+        color: white;
+    }
+
+   
+    
+    
+    #contact{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    
+    #ph-em{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+       
+    }
+    #ph-em p a{
+        text-align: center;
+    }
+    
+
+
 
 
 /******************************************************************************!!!!!!!END!!!!!!!!!******************************************************************************/
