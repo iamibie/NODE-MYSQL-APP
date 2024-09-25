@@ -74,7 +74,7 @@ app.listen(port, ()=>{
 
 
 
-/*
+
 //Create Database
 app.get('/createdb',(req, res) =>{
     let sql = 'CREATE DATABASE portfoliodb'
@@ -83,7 +83,7 @@ app.get('/createdb',(req, res) =>{
         console.log(result)
         res.send('Database created...')
     })
-})*/
+})/**/
 
 
 

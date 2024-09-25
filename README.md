@@ -1,5 +1,3 @@
-markdown
-Copy code
 # My Dockerized Web Application
 
 This project sets up a full-stack web application using Docker Compose. It includes a MySQL database, a Node.js backend, and a static frontend served through Nginx.
